@@ -1,0 +1,22 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12 col-12 mb-4">
+            <div class=" py-4 position-relative brdr text-center">
+                <h2 class="my-3">Trending Movies To Watch Right Now </h2>
+                
+            </div>
+
+        </div>
+        <div *ngFor="let movie of terndingMovies" class="col-md-3  col-6">
+            <div class="movie position-relative ">
+                <a [routerLink]="['/moviedetails',movie.id]">
+                    <img [src]="imgPrefix+movie.poster_path" class="w-100 rounded" alt="">
+                    <h3 class="h6 my-3">{{movie.title}}</h3>
+                    <div class="vote p-2 fw-bolder  position-absolute top-0 end-0 bg-lights rounded">
+                        {{movie.vote_average}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

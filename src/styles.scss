@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    background-color: #131722;
+    color           : #fff;
+    font-family     : 'Montserrat Alternates', sans-serif !important;
+}
+
+a,
+a:hover {
+    color          : #fff !important;
+    text-decoration: none;
+}
+
+
+
+.bg-lights {
+    background-color: #24baef !important;
+}
+
+.brdr::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 50%;
+    height          : 1px;
+    background-color: #a8a8a83d;
+}
+
+.brdr::before {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 0;
+    right           : 0;
+    height          : 1px;
+    background-color: #a8a8a83d;
+}
+
+@media screen and (min-width: 576px) {
+    div.example {
+        font-size: 10px;
+        padding: 0;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .vote {
+        font-size: 10px;
+        padding: 0;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,60 @@
+<app-header [headerTrendinMovie]="terndingMovies"></app-header>
+<div class="container">
+    <div class="row px-3">
+        <div class="col-md-4 col-12 mb-4">
+            <div class=" py-4 position-relative brdr">
+                <h2 class="my-3">Trending Movies <br> To Watch Right Now </h2>
+                <p class="text-muted">Trending Movies To Watch Right Now</p>
+            </div>
+    
+        </div>
+        <div *ngFor="let movie of terndingMovies" class="col-md-2  col-6">
+            <div class="movie position-relative " >
+                <a  [routerLink]="['/moviedetails',movie.id]">
+                    <img [src]="imgPrefix+movie.poster_path" class="w-100 rounded" alt="">
+                    <h3 class="h6 my-3">{{movie.title}}</h3>
+                    <div class="vote p-2 fw-bolder  position-absolute top-0 end-0 bg-lights rounded">{{movie.vote_average}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row py-4  px-3">
+        <div class="col-md-4 col-12 mb-4">
+            <div class=" py-4 position-relative brdr ">
+                <h2 class="my-3">Trending Tv <br> To Watch Right Now </h2>
+                <p class="text-muted">Trending Tv To Watch Right Now</p>
+            </div>
+    
+        </div>
+        <div *ngFor="let Tv of terndingTv" class="col-md-2  col-6">
+            <div class="movie position-relative" >
+                <a  [routerLink]="['/moviedetails',Tv.id]">
+                    <img [src]="imgPrefix+Tv.poster_path" class="w-100 rounded" onerror="erorr" alt="">
+                    <h3 class="h6 my-3">{{Tv.name}}</h3>
+                    <div class="vote p-2 fw-bolder position-absolute top-0 end-0 bg-lights rounded">{{Tv.vote_average}}</div>
+    
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row py-4  px-3">
+        <div class="col-md-4 col-12 mb-4">
+            <div class=" py-4 position-relative brdr ">
+                <h2 class="my-3">Trending People <br> To Watch Right Now </h2>
+                <p class="text-muted">Trending People To Watch Right Now</p>
+            </div>
+
+        </div>
+        <div *ngFor="let person of terndingPeople" class="col-md-2  col-6">
+    
+            <div class="movie position-relative ">
+                
+                    <img  [src]="imgPrefix+person.profile_path"  onError="this.src='assets/images/tom.jpg'" class="w-100  rounded" alt="">
+                    <h3 class="h6 my-3">{{person.name}}</h3>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
