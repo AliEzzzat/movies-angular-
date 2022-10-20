@@ -10,10 +10,10 @@
         <div *ngFor="let movie of terndingMovies" class="col-md-3  col-6">
             <div class="movie position-relative ">
                 <a [routerLink]="['/moviedetails',movie.id]">
-                    <img [src]="imgPrefix+movie.poster_path" class="w-100 rounded" alt="">
+                    <img [src]="imgPrefix+movie.poster_path" onError="this.src='assets/images/onError.jpg'" class="w-100 rounded" alt="">
                     <h3 class="h6 my-3">{{movie.title}}</h3>
                     <div class="vote p-2 fw-bolder  position-absolute top-0 end-0 bg-lights rounded">
-                        {{movie.vote_average}}</div>
+                        {{movie.vote_average.toFixed(1)}}</div>
                 </a>
             </div>
         </div>

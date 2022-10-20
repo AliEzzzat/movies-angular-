@@ -7,6 +7,9 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+updateUrl($event: ErrorEvent) {
+throw new Error('Method not implemented.');
+}
   imgPrefix: string = 'https://image.tmdb.org/t/p/w500';
   constructor(private _MoviesService: MoviesService) {}
   terndingMovies: any[] = [];

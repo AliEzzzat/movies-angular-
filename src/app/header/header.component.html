@@ -10,8 +10,8 @@
 
         <ng-template carouselSlide="" [id]="movie.id">
           <a [routerLink]="['/moviedetails',movie.id]">
-            <img class="rounded" [src]="imgPrefix+movie.poster_path">
-            <div class="vote p-2 fw-bolder  position-absolute top-0 end-0 bg-lights rounded">{{movie.vote_average}}
+            <img class="rounded" [src]="imgPrefix+movie.poster_path" onError="this.src='assets/images/onError.jpg'">
+            <div class="vote p-2 fw-bolder  position-absolute top-0 end-0 bg-lights rounded">{{movie.vote_average.toFixed(1)}}
             </div>
           </a>
 

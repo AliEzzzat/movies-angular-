@@ -9,9 +9,9 @@
         <div *ngFor="let Tv of terndingTv" class="col-md-3  col-6">
             <div class="movie position-relative" >
                 <a  [routerLink]="['/moviedetails',Tv.id]">
-                    <img [src]="imgPrefix+Tv.poster_path" class="w-100 rounded" onerror="erorr" alt="">
+                    <img [src]="imgPrefix+Tv.poster_path" onError="this.src='assets/images/onError.jpg'"  class="w-100 rounded" alt="">
                     <h3 class="h6 my-3">{{Tv.name}}</h3>
-                    <div class="vote p-2 fw-bolder position-absolute top-0 end-0 bg-lights rounded">{{Tv.vote_average}}</div>
+                    <div class="vote p-2 fw-bolder position-absolute top-0 end-0 bg-lights rounded">{{Tv.vote_average.toFixed(1)}}</div>
     
                 </a>
             </div>

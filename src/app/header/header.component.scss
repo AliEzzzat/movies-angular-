@@ -1,9 +1,9 @@
 header{
-    background-image: url(../../assets/images/bg15.jpg) !important;
+    background-image: url(../../assets/images/home.webp) !important;
     background-size: cover;
     background-position: center center;
     margin-bottom: 30px;
-    height: 100vh;
+    height: 75vh;
 }
 img{
     height: 200px;
@@ -11,9 +11,9 @@ img{
 }
 .layer{
     z-index: 100;
-    background-color: rgba(0, 0, 0.5, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .container{
-    z-index: 10000;
+    z-index: 1000;
 }
 
