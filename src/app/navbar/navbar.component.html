@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li *ngIf="isLogin" class="nav-item active">
-          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="/home" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
-        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/gallery">Gallery</a></li>
-        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/movies">Movies</a></li>
-        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/tv">TV</a></li>
-        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/contacts">Contacts</a></li>
+        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/about" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a></li>
+        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/gallery" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Gallery</a></li>
+        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/movies" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Movies</a></li>
+        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/tv" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">TV</a></li>
+        <li *ngIf="isLogin" class="nav-item"><a class="nav-link" routerLink="/contacts" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contacts</a></li>
        
        
       </ul>
@@ -26,8 +26,8 @@
             <i class="fab p-2 fa-spotify"></i>
             <i class="fab p-2 fa-xbox"></i>
         </li>
-        <li *ngIf="!isLogin" class="nav-item"><a class="nav-link" routerLink="/login">Login</a></li>
-        <li *ngIf="!isLogin" class="nav-item"><a class="nav-link" routerLink="/register">Register</a></li>
+        <li *ngIf="!isLogin" class="nav-item"><a  class="nav-link" routerLink="/login" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Login</a></li>
+        <li *ngIf="!isLogin" class="nav-item"><a class="nav-link" routerLink="/register" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Register</a></li>
         <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Settings
